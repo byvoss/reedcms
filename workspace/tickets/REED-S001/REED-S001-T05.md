@@ -1,31 +1,35 @@
-# [REED-S001-T05] - Registry und Snippets System
+# [REED-S001-T05] - Core Architecture - 4-Layer Architecture
 
-## Status: INACTIVE
+## Ticket-Übersicht
+- **Ticket-ID:** REED-S001-T05
+- **Titel:** Core Architecture - 4-Layer Architecture
+- **Status:** inactive
+- **Erstellt:** 2024-01-09 10:00:00
+- **Sprint:** S001
+- **Verantwortlich:** Claude
 
 ## Beschreibung
-Erstelle fokussierte Dokumentation für das Registry und Snippets System basierend auf den Import-Dokumenten.
+Dokumentation der 4-Layer Architektur als Anti-Bloat Design Pattern.
+
+**Fokus:** NUR das Layer-System und dessen Verantwortlichkeiten.
 
 ## Akzeptanzkriterien
-- [ ] Registry-Konzept klar definiert
-- [ ] Snippet-System und dessen Rolle erklärt
-- [ ] Meta-Snippets Konzept dokumentiert
-- [ ] Beziehung zwischen Registry, Snippets und UCG dargestellt
-- [ ] Prüfung: Inhalte aus workspace/import/concepts_snippets.md
-- [ ] Prüfung: Inhalte aus workspace/import/concepts_registry_redirection.md
-- [ ] Prüfung: Keine eigenen Interpretationen
-- [ ] Prüfung: Dokument < 500 Zeilen
-- [ ] Status in ticket_log.csv auf 'completed' gesetzt
+1. [ ] Jede Layer klar definiert
+2. [ ] Verantwortlichkeiten abgegrenzt
+3. [ ] Anti-Bloat Mechanismen erklärt
+4. [ ] Data Flow dokumentiert
+5. [ ] Keine UCG/EPC Details
+6. [ ] Max. 500 Zeilen
 
-## Regeln
-- Dokumentation: DEUTSCH
-- Code und Code-Kommentare: ENGLISH
-- Definitive Aussagen statt Beispiel-Code
-- Token-effiziente Formulierung
-
-## Input-Referenzen
-- workspace/import/concepts_snippets.md
-- workspace/import/concepts_registry_redirection.md
-- workspace/import/concepts_meta_snippets.md
+## Input-Dokumente
+- `reedcms_02_architecture.md` - 4-Layer Details
+- `reedcms_glossary.md` - Layer Definitionen
+- `reedcms_qa.md` - Layer Clarifications
 
 ## Output
-- docs/architecture/03_registry_snippets.md
+- `workspace/restructured/03-4layer-architecture.md`
+
+## Notizen
+- CSV + PostgreSQL Main + PostgreSQL UCG + Redis
+- Fokus auf Separation of Concerns
+- Performance-Charakteristiken pro Layer

@@ -11,19 +11,26 @@
 ## Sprint-Ziele
 
 ### Primärziel
-**100% der workspace/import Dokumentation in manageable, thematisch fokussierte Dokumente umwandeln**
+**100% der workspace/import Dokumentation in manageable, thematisch fokussierte Dokumente umwandeln (max. 500 Zeilen pro Dokument)**
 
 ### Detailziele
 1. ✅ **Repository und Ticket-System aufsetzen** (T01)
 2. ✅ **Alle Import-Dokumente analysieren und kategorisieren** (T02)
-3. **Core Concepts dokumentieren** (T03)
-4. **UCG System vollständig erklären** (T04)
-5. **Registry und Snippets System dokumentieren** (T05)
-6. **Template System und EPC erläutern** (T06)
-7. **Datenbank-Architektur (4-Layer) beschreiben** (T07)
-8. **Content Types und Meta System dokumentieren** (T08)
-9. **Security und Content Firewall erklären** (T09)
-10. **Feature Management und Scopes beschreiben** (T10)
+3. **Core Architecture - UCG System** (T03) - Dediziert nur Universal Content Graph
+4. **Core Architecture - EPC System** (T04) - Dediziert nur Explicit Path Chain
+5. **Core Architecture - 4-Layer Architecture** (T05) - Dediziert nur Layer-System
+6. **WCAG 2.2 Compliance System** (T06) - NEU: Barrierefreiheit als Default
+7. **Snippet System Grundlagen** (T07) - Nur Snippet-Konzept
+8. **Registry System** (T08) - Nur Meta-Snippet Registry
+9. **Template System** (T09) - Nur Tera + Web Components
+10. **Translation System** (T10) - Nur i18n Multi-Layer
+11. **Theme Architecture** (T11) - Nur Theme-Konzept
+12. **Context Scoping System** (T12) - Nur Scope-System
+13. **Feature Toggle Architecture** (T13) - Nur Feature Toggles via Scopes
+14. **CLI Command Reference** (T14) - Nur Commands
+15. **Security Implementation** (T15) - Nur Auth + Permissions
+16. **Content Firewall System** (T16) - Nur Firewall Rules
+17. **Plugin Architecture** (T17) - Nur Plugin-Konzept
 
 ## Sprint-Regeln
 
@@ -60,21 +67,28 @@
 | T00 | Meta-Ticket: Arbeitsweise | active | ongoing |
 | T01 | Repository Setup | completed | 100% ✅ |
 | T02 | Analyse und Kategorisierung | completed | 100% ✅ |
-| T03 | Core Concepts | inactive | 0% |
-| T04 | UCG System | inactive | 0% |
-| T05 | Registry und Snippets | inactive | 0% |
-| T06 | Template System | inactive | 0% |
-| T07 | Datenbank-Architektur | inactive | 0% |
-| T08 | Content Types | inactive | 0% |
-| T09 | Security | inactive | 0% |
-| T10 | Feature Management | inactive | 0% |
+| T03 | Core Architecture - UCG System | active | 0% |
+| T04 | Core Architecture - EPC System | inactive | 0% |
+| T05 | Core Architecture - 4-Layer Architecture | inactive | 0% |
+| T06 | WCAG 2.2 Compliance System | inactive | 0% |
+| T07 | Snippet System Grundlagen | inactive | 0% |
+| T08 | Registry System | inactive | 0% |
+| T09 | Template System | inactive | 0% |
+| T10 | Translation System | inactive | 0% |
+| T11 | Theme Architecture | inactive | 0% |
+| T12 | Context Scoping System | inactive | 0% |
+| T13 | Feature Toggle Architecture | inactive | 0% |
+| T14 | CLI Command Reference | inactive | 0% |
+| T15 | Security Implementation | inactive | 0% |
+| T16 | Content Firewall System | inactive | 0% |
+| T17 | Plugin Architecture | inactive | 0% |
 
 ### Sprint-Metriken
-- **Tickets gesamt:** 10 (+1 Meta)
+- **Tickets gesamt:** 17 (+1 Meta)
 - **Tickets abgeschlossen:** 2
-- **Tickets in Arbeit:** 0
-- **Tickets ausstehend:** 8
-- **Sprint-Fortschritt:** 20%
+- **Tickets in Arbeit:** 1
+- **Tickets ausstehend:** 15
+- **Sprint-Fortschritt:** 12%
 
 ## Qualitätssicherung
 

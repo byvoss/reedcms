@@ -1,30 +1,35 @@
-# [REED-S001-T07] - Datenbank-Architektur (4-Layer)
+# [REED-S001-T07] - Snippet System Grundlagen
 
-## Status: INACTIVE
+## Ticket-Übersicht
+- **Ticket-ID:** REED-S001-T07
+- **Titel:** Snippet System Grundlagen
+- **Status:** inactive
+- **Erstellt:** 2024-01-09 10:00:00
+- **Sprint:** S001
+- **Verantwortlich:** Claude
 
 ## Beschreibung
-Erstelle fokussierte Dokumentation für die 4-Layer Datenbank-Architektur basierend auf den Import-Dokumenten.
+Dokumentation des Snippet-Konzepts als Basis-Baustein.
+
+**Fokus:** NUR das Snippet-Konzept selbst, keine Registry/Template Details.
 
 ## Akzeptanzkriterien
-- [ ] 4-Layer Architektur klar definiert: CSV, PostgreSQL Main, PostgreSQL UCG, Redis
-- [ ] Rolle jeder Schicht erklärt
-- [ ] CSV als Source of Truth Prinzip dokumentiert
-- [ ] TTL-basierte Memory Protection erklärt
-- [ ] Prüfung: Inhalte aus workspace/import/architecture_layers.md
-- [ ] Prüfung: Keine eigenen Interpretationen
-- [ ] Prüfung: Dokument < 500 Zeilen
-- [ ] Status in ticket_log.csv auf 'completed' gesetzt
+1. [ ] Snippet-Definition klar
+2. [ ] Komponenten erklärt (.tera, .js, .css)
+3. [ ] Naming Conventions
+4. [ ] Snippet vs traditionelle Ansätze
+5. [ ] Keine Registry-Details
+6. [ ] Max. 500 Zeilen
 
-## Regeln
-- Dokumentation: DEUTSCH
-- Code und Code-Kommentare: ENGLISH
-- Architektur-Diagramme in ASCII wenn nötig
-- Klare Verantwortlichkeiten pro Layer
-
-## Input-Referenzen
-- workspace/import/architecture_layers.md
-- workspace/import/concepts_redis_ttl.md
-- workspace/import/concepts_source_of_truth.md
+## Input-Dokumente
+- `reedcms_04_registry.md` - Snippet Basics
+- `reedcms_glossary.md` - Snippet Definition
+- `reedcms_03_standards.md` - Naming
 
 ## Output
-- docs/architecture/05_database_layers.md
+- `workspace/restructured/07-snippet-system.md`
+
+## Notizen
+- Grundkonzept für Content-Bausteine
+- Web Component Integration
+- KISS-Prinzip

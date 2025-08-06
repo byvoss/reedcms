@@ -2,11 +2,18 @@ ticket_id,title,status,created,updated,sprint,assignee,acceptance_criteria_met
 [REED-S001-T00],Meta-Ticket: Arbeitsweise und Qualitätssicherung,active,2024-01-09 10:00:00,2025-08-06 19:30:00,S001,Claude,ongoing
 [REED-S001-T01],Repository Setup und Ticket System,completed,2024-01-09 10:00:00,2024-01-09 10:15:00,S001,Claude,done
 [REED-S001-T02],Analyse und Kategorisierung der Import-Dokumente,completed,2024-01-09 10:00:00,2025-08-06 14:45:00,S001,Claude,done
-[REED-S001-T03],Core Concepts - Grundlegende Systemarchitektur,active,2024-01-09 10:00:00,2025-08-06 19:30:00,S001,Claude,pending
-[REED-S001-T04],UCG System Dokumentation,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
-[REED-S001-T05],Registry und Snippets System,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
-[REED-S001-T06],Template System und EPC,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
-[REED-S001-T07],Datenbank-Architektur (4-Layer),inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
-[REED-S001-T08],Content Types und Meta System,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
-[REED-S001-T09],Security und Content Firewall,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
-[REED-S001-T10],Feature Management und Scopes,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T03],Core Architecture - UCG System,active,2024-01-09 10:00:00,2025-08-06 20:45:00,S001,Claude,pending
+[REED-S001-T04],Core Architecture - EPC System,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T05],Core Architecture - 4-Layer Architecture,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T06],WCAG 2.2 Compliance System,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T07],Snippet System Grundlagen,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T08],Registry System,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T09],Template System (Tera + Web Components),inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T10],Translation System (i18n),inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T11],Theme Architecture,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T12],Context Scoping System,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T13],Feature Toggle Architecture,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T14],CLI Command Reference,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T15],Security Implementation,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T16],Content Firewall System,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T17],Plugin Architecture,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending

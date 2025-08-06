@@ -1,31 +1,34 @@
-# [REED-S001-T08] - Content Types und Meta System
+# [REED-S001-T08] - Registry System
 
-## Status: INACTIVE
+## Ticket-Übersicht
+- **Ticket-ID:** REED-S001-T08
+- **Titel:** Registry System
+- **Status:** inactive
+- **Erstellt:** 2024-01-09 10:00:00
+- **Sprint:** S001
+- **Verantwortlich:** Claude
 
 ## Beschreibung
-Erstelle fokussierte Dokumentation für Content Types und das Meta-System basierend auf den Import-Dokumenten.
+Dokumentation des Meta-Snippet Registry Systems.
+
+**Fokus:** NUR Registry-Mechanismus und CSV-Definitionen.
 
 ## Akzeptanzkriterien
-- [ ] Content Type Konzept klar definiert
-- [ ] Meta-Snippets und deren Rolle erklärt
-- [ ] Field Types und Validierung dokumentiert
-- [ ] Beziehung zu UCG dargestellt
-- [ ] Prüfung: Inhalte aus workspace/import/concepts_content_types.md
-- [ ] Prüfung: Inhalte aus workspace/import/concepts_meta_snippets.md
-- [ ] Prüfung: Keine eigenen Erweiterungen
-- [ ] Prüfung: Dokument < 500 Zeilen
-- [ ] Status in ticket_log.csv auf 'completed' gesetzt
+1. [ ] Registry-Konzept erklärt
+2. [ ] CSV-Format dokumentiert
+3. [ ] Field-Type-System beschrieben
+4. [ ] Validation Rules
+5. [ ] Keine Snippet-Grundlagen
+6. [ ] Max. 500 Zeilen
 
-## Regeln
-- Dokumentation: DEUTSCH
-- Code und Code-Kommentare: ENGLISH
-- Fokus auf Typ-Definitionen, nicht Code
-- Klare Hierarchie und Beziehungen
-
-## Input-Referenzen
-- workspace/import/concepts_content_types.md
-- workspace/import/concepts_meta_snippets.md
-- workspace/import/concepts_validation.md
+## Input-Dokumente
+- `reedcms_04_registry.md` - Registry Details
+- `reedcms_02_architecture.md` - CSV Layer
 
 ## Output
-- docs/architecture/06_content_types.md
+- `workspace/restructured/08-registry-system.md`
+
+## Notizen
+- Meta-Snippet Definitionen
+- CSV als Source of Truth
+- Validierung und Typsicherheit

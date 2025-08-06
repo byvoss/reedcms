@@ -1,30 +1,34 @@
-# [REED-S001-T09] - Security und Content Firewall
+# [REED-S001-T09] - Template System (Tera + Web Components)
 
-## Status: INACTIVE
+## Ticket-Übersicht
+- **Ticket-ID:** REED-S001-T09
+- **Titel:** Template System (Tera + Web Components)
+- **Status:** inactive
+- **Erstellt:** 2024-01-09 10:00:00
+- **Sprint:** S001
+- **Verantwortlich:** Claude
 
 ## Beschreibung
-Erstelle fokussierte Dokumentation für Security-Konzepte und die Content Firewall basierend auf den Import-Dokumenten.
+Dokumentation des Template Systems mit Tera und Web Components.
+
+**Fokus:** NUR Template-Engine und Web Component Integration.
 
 ## Akzeptanzkriterien
-- [ ] Content Firewall Konzept (PF-inspiriert) dokumentiert
-- [ ] Feld-Schutz Mechanismen erklärt
-- [ ] ACL System definiert
-- [ ] Security by Design Prinzipien aufgelistet
-- [ ] Prüfung: Inhalte aus workspace/import/security_*.md
-- [ ] Prüfung: Keine eigenen Security-Features erfunden
-- [ ] Prüfung: Dokument < 500 Zeilen
-- [ ] Status in ticket_log.csv auf 'completed' gesetzt
+1. [ ] Tera Template Syntax
+2. [ ] Web Component Lifecycle
+3. [ ] Server/Client Integration
+4. [ ] Template Functions
+5. [ ] Keine Theme/Scope Details
+6. [ ] Max. 500 Zeilen
 
-## Regeln
-- Dokumentation: DEUTSCH
-- Code und Code-Kommentare: ENGLISH
-- Klare Regeln und Policies
-- Keine Implementation Details
-
-## Input-Referenzen
-- workspace/import/security_firewall.md
-- workspace/import/security_acl.md
-- workspace/import/concepts_content_firewall.md
+## Input-Dokumente
+- `reedcms_06_templates.md` - Template System
+- `reedcms_qa_part2.md` - Template Integration
 
 ## Output
-- docs/architecture/07_security.md
+- `workspace/restructured/09-template-system.md`
+
+## Notizen
+- Tera + Web Components Combo
+- Progressive Enhancement
+- Mobile-First Approach

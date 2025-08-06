@@ -1,30 +1,35 @@
-# [REED-S001-T04] - UCG System Dokumentation
+# [REED-S001-T04] - Core Architecture - EPC System
 
-## Status: INACTIVE
+## Ticket-Übersicht
+- **Ticket-ID:** REED-S001-T04
+- **Titel:** Core Architecture - EPC System
+- **Status:** inactive
+- **Erstellt:** 2024-01-09 10:00:00
+- **Sprint:** S001
+- **Verantwortlich:** Claude
 
 ## Beschreibung
-Erstelle fokussierte Dokumentation für das Universal Content Graph (UCG) System basierend auf den Import-Dokumenten.
+Dokumentation des Explicit Path Chain (EPC) Systems für Theme-File-Resolution.
+
+**Fokus:** NUR das EPC-Konzept für File-Resolution.
 
 ## Akzeptanzkriterien
-- [ ] UCG-Konzept klar und prägnant beschrieben
-- [ ] Entity/Association Pattern definiert
-- [ ] Datenbank-Explosion Problem und Lösung dokumentiert
-- [ ] Beziehung zu Registry erklärt
-- [ ] Prüfung: Alle Inhalte aus workspace/import/concepts_ucg.md
-- [ ] Prüfung: Keine eigenen Erweiterungen
-- [ ] Prüfung: Dokument < 500 Zeilen
-- [ ] Status in ticket_log.csv auf 'completed' gesetzt
+1. [ ] EPC-Konzept klar definiert
+2. [ ] File-Resolution-Mechanismus erklärt
+3. [ ] Theme-Chain-Building dokumentiert
+4. [ ] Praktische Beispiele für Overrides
+5. [ ] Keine Vermischung mit UCG
+6. [ ] Max. 500 Zeilen
 
-## Regeln
-- Dokumentation: DEUTSCH
-- Code und Code-Kommentare: ENGLISH
-- Fokus auf KONZEPT, nicht Implementation
-- Klare Definitionen statt Code-Beispiele
-
-## Input-Referenzen
-- workspace/import/concepts_ucg.md
-- workspace/import/concepts_registry_redirection.md
-- Weitere UCG-relevante Dateien
+## Input-Dokumente
+- `reedcms_02_architecture.md` - EPC Erwähnungen
+- `reedcms_glossary.md` - EPC Definition
+- `reedcms_qa_part2.md` - EPC in Hot Reload
 
 ## Output
-- docs/architecture/02_ucg_system.md
+- `workspace/restructured/02-epc-system.md`
+
+## Notizen
+- ReedCMS branded file resolution system
+- Fokus auf praktische Anwendung
+- Theme-Override-Beispiele wichtig

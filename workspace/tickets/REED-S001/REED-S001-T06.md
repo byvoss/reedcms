@@ -1,32 +1,35 @@
-# [REED-S001-T06] - Template System und EPC
+# [REED-S001-T06] - WCAG 2.2 Compliance System
 
-## Status: INACTIVE
+## Ticket-Übersicht
+- **Ticket-ID:** REED-S001-T06
+- **Titel:** WCAG 2.2 Compliance System
+- **Status:** inactive
+- **Erstellt:** 2024-01-09 10:00:00
+- **Sprint:** S001
+- **Verantwortlich:** Claude
 
 ## Beschreibung
-Erstelle fokussierte Dokumentation für das Template System und Explicit Path Chain (EPC) basierend auf den Import-Dokumenten.
+Dokumentation des WCAG 2.2 Compliance Systems als Default-Feature.
+
+**Fokus:** Barrierefreiheit out-of-the-box mit automatischer Reader-Erkennung.
 
 ## Akzeptanzkriterien
-- [ ] EPC-Konzept klar definiert
-- [ ] Theme Override Mechanismus erklärt
-- [ ] Reihenfolge der Datei-Auflösung dokumentiert
-- [ ] Template-Hierarchie dargestellt
-- [ ] Prüfung: Inhalte aus workspace/import/concepts_epc.md
-- [ ] Prüfung: Inhalte aus workspace/import/rendering_*.md
-- [ ] Prüfung: Keine eigenen Erweiterungen
-- [ ] Prüfung: Dokument < 500 Zeilen
-- [ ] Status in ticket_log.csv auf 'completed' gesetzt
+1. [ ] WCAG 2.2 Standards erklärt
+2. [ ] Reader-Detection-System dokumentiert
+3. [ ] Cookie-Consent-Integration beschrieben
+4. [ ] Snippet-Anpassungen gezeigt
+5. [ ] Tera-Template-Integration
+6. [ ] Max. 500 Zeilen
 
-## Regeln
-- Dokumentation: DEUTSCH
-- Code und Code-Kommentare: ENGLISH
-- Fokus auf KONZEPT und Reihenfolgen
-- Weniger Implementation, mehr Definition
-
-## Input-Referenzen
-- workspace/import/concepts_epc.md
-- workspace/import/rendering_overview.md
-- workspace/import/rendering_themes.md
-- workspace/import/rendering_blocks.md
+## Input-Dokumente
+- NEU: Aus unserer Diskussion
+- Zwei-Stufen-System definiert
+- base.tera + consent flow
 
 ## Output
-- docs/architecture/04_template_system.md
+- `workspace/restructured/05-wcag-compliance.md`
+
+## Notizen
+- Neue Innovation für ReedCMS
+- Marketing-Differenzierung
+- Automatisch barrierefrei

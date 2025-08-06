@@ -1,30 +1,35 @@
-# [REED-S001-T10] - Feature Management und Scopes
+# [REED-S001-T10] - Translation System (i18n)
 
-## Status: INACTIVE
+## Ticket-Übersicht
+- **Ticket-ID:** REED-S001-T10
+- **Titel:** Translation System (i18n)
+- **Status:** inactive
+- **Erstellt:** 2024-01-09 10:00:00
+- **Sprint:** S001
+- **Verantwortlich:** Claude
 
 ## Beschreibung
-Erstelle fokussierte Dokumentation für Feature Management und Scope-basierte Trennung basierend auf den Import-Dokumenten.
+Dokumentation des Multi-Layer Translation Systems.
+
+**Fokus:** NUR i18n System mit 3-Layer Priority.
 
 ## Akzeptanzkriterien
-- [ ] Feature Toggle System erklärt
-- [ ] Scope-basierte Trennung definiert
-- [ ] Aktivierungs-Mechanismen dokumentiert
-- [ ] Beziehung zu Content Types dargestellt
-- [ ] Prüfung: Inhalte aus workspace/import/concepts_scopes.md
-- [ ] Prüfung: Keine eigenen Features hinzugefügt
-- [ ] Prüfung: Dokument < 500 Zeilen
-- [ ] Status in ticket_log.csv auf 'completed' gesetzt
+1. [ ] 3-Layer System erklärt
+2. [ ] File Discovery dokumentiert
+3. [ ] string() Function Usage
+4. [ ] Locale Detection
+5. [ ] Hot Reload für Translations
+6. [ ] Max. 500 Zeilen
 
-## Regeln
-- Dokumentation: DEUTSCH
-- Code und Code-Kommentare: ENGLISH
-- Fokus auf Konzept und Anwendung
-- Klare Abgrenzungen zwischen Scopes
-
-## Input-Referenzen
-- workspace/import/concepts_scopes.md
-- workspace/import/features_*.md
-- Relevante Teile aus anderen Dokumenten
+## Input-Dokumente
+- `reedcms_09_advanced_features.md` - i18n Details
+- `reedcms_qa_part2.md` - Translation Architecture
+- `reedcms_qa.md` - Locale Detection
 
 ## Output
-- docs/architecture/08_features_scopes.md
+- `workspace/restructured/10-translation-system.md`
+
+## Notizen
+- Global > Snippet > Plugin Priority
+- CSV-basierte Translations
+- Clean Tera Syntax

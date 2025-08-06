@@ -1,32 +1,38 @@
-# [REED-S001-T03] - Core Concepts - Grundlegende Systemarchitektur
+# [REED-S001-T03] - Core Architecture - UCG System
 
-## Status: INACTIVE
+## Ticket-Übersicht
+- **Ticket-ID:** REED-S001-T03
+- **Titel:** Core Architecture - UCG System
+- **Status:** active
+- **Erstellt:** 2024-01-09 10:00:00
+- **Aktualisiert:** 2025-08-06 20:45:00
+- **Sprint:** S001
+- **Verantwortlich:** Claude
 
 ## Beschreibung
-Erstelle fokussierte Dokumentation für die grundlegenden Architekturkonzepte von ReedCMS basierend auf den Import-Dokumenten.
+Dokumentation des Universal Content Graph (UCG) Systems als Kern-Innovation von ReedCMS. 
+
+**Fokus:** NUR das UCG-Konzept, keine Vermischung mit anderen Themen.
 
 ## Akzeptanzkriterien
-- [ ] Relevante Inhalte aus Import-Dokumenten identifiziert und extrahiert
-- [ ] Klare, prägnante Beschreibung der Kern-Architektur
-- [ ] KISS-Brain Philosophie klar dokumentiert
-- [ ] Minimalistic Code Prinzip erklärt
-- [ ] CSV als Source of Truth definiert
-- [ ] Prüfung: Alle Aussagen stammen aus workspace/import
-- [ ] Prüfung: Keine eigenen Interpretationen hinzugefügt
-- [ ] Prüfung: Dokument < 500 Zeilen
-- [ ] Status in ticket_log.csv auf 'completed' gesetzt
+1. [ ] UCG-Konzept klar definiert
+2. [ ] Entity-Association Pattern erklärt
+3. [ ] Performance-Charakteristiken dokumentiert
+4. [ ] Praktische Beispiele gegeben
+5. [ ] Keine Redundanzen zu anderen Dokumenten
+6. [ ] Max. 500 Zeilen
+7. [ ] Originaler Informationsgehalt bewahrt
 
-## Regeln
-- Dokumentation: DEUTSCH
-- Code und Code-Kommentare: ENGLISH
-- WENIGER Code-Beispiele, MEHR definitive Aussagen
-- NUR Inhalte aus workspace/import verwenden
-- Token-effizient formulieren
-
-## Input-Referenzen
-- workspace/import/concepts_*.md
-- workspace/import/architecture_*.md
-- Weitere relevante Dateien aus der Analyse (T02)
+## Input-Dokumente
+- `reedcms_01_overview.md` - UCG Erwähnungen
+- `reedcms_02_architecture.md` - UCG Details
+- `reedcms_glossary.md` - UCG Definition
+- `reedcms_qa.md` - UCG Clarifications
 
 ## Output
-- docs/architecture/01_core_concepts.md
+- `workspace/restructured/01-ucg-system.md`
+
+## Notizen
+- Keine 4k Demo Scene Referenzen
+- Fokus auf technische Fakten
+- Klare Trennung von EPC und 4-Layer
