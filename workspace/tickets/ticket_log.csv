@@ -1,0 +1,11 @@
+ticket_id,title,status,created,updated,sprint,assignee,acceptance_criteria_met
+[REED-S001-T01],Repository Setup und Ticket System,active,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T02],Analyse und Kategorisierung der Import-Dokumente,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T03],Core Concepts - Grundlegende Systemarchitektur,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T04],UCG System Dokumentation,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T05],Registry und Snippets System,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T06],Template System und EPC,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T07],Datenbank-Architektur (4-Layer),inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T08],Content Types und Meta System,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T09],Security und Content Firewall,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
+[REED-S001-T10],Feature Management und Scopes,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
