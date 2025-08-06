@@ -78,11 +78,12 @@ grep -r "UCG" workspace/import/
 ## WICHTIG: Ticket-System und Arbeitsweise
 
 ### Beim Session-Start SOFORT einlesen (in dieser Reihenfolge):
-1. **workspace/tickets/validation_checklist.md** - Goldene Regeln der Arbeit
-2. **workspace/tickets/sprint_checklist.md** - Sprint-Prozess verstehen
-3. **workspace/tickets/ticket_log.csv** - Identifiziere aktiven Sprint via "active" Status
-4. **workspace/tickets/REED-S###/REED-S###.md** - Sprint-Status des aktiven Sprints
-5. **workspace/tickets/REED-S###/REED-S###-T00.md** - Meta-Prozess des aktiven Sprints
+1. **workspace/tickets/VALIDATION_CHECKLIST.md** - Goldene Regeln der Arbeit
+2. **workspace/tickets/DEPENDENCY_FLOW.md** - System-Erklärung und Sprint-Erkennung
+3. **workspace/tickets/SPRINT_CHECKLIST.md** - Sprint-Prozess verstehen
+4. **workspace/tickets/ticket_log.csv** - Identifiziere aktiven Sprint via "active" Status
+5. **workspace/tickets/REED-S###/REED-S###.md** - Sprint-Status des aktiven Sprints
+6. **workspace/tickets/REED-S###/REED-S###-T00.md** - Meta-Prozess des aktiven Sprints
 
 ### Selbstprüfender Ticket-Zyklus
 
@@ -91,9 +92,11 @@ Wir arbeiten in einem selbstprüfenden, selbstdokumentierenden Ticket-System:
 ```
 workspace/tickets/
 ├── ticket_log.csv              # ZENTRALE Wahrheit: Alle Sprints & Tickets
-├── validation_checklist.md     # GOLDENE REGEL: Original-Informationsgehalt bewahren
-├── sprint_checklist.md         # Sprint-Management-Prozess
+├── VALIDATION_CHECKLIST.md     # GOLDENE REGEL: Original-Informationsgehalt bewahren
 ├── DEPENDENCY_FLOW.md          # System-Erklärung und Sprint-Erkennung
+├── SPRINT_CHECKLIST.md         # Sprint-Management-Prozess
+├── SPRINT_TEMPLATE.md          # Vorlage für neue Sprints
+├── README.md                   # Übersicht des Ticket-Systems
 ├── REED-S001/                  # Sprint 1: Dokumentations-Neustrukturierung
 ├── REED-S002/                  # Sprint 2: [Nächstes Thema]
 └── REED-S###/                  # Weitere thematische Sprints
@@ -118,8 +121,13 @@ workspace/tickets/
 
 ### Workflow für neue Session
 ```bash
-# 1. Aktiven Sprint identifizieren
-ACTIVE_SPRINT=$(grep "active" workspace/tickets/ticket_log.csv | head -1 | cut -d',' -f1 | cut -d'-' -f1-2)
+# 1. Aktiven Sprint identifizieren (via Sprint-Spalte)
+ACTIVE_SPRINT=$(grep "active" workspace/tickets/ticket_log.csv | head -1 | cut -d',' -f6 | sed 's/S/REED-S/')
+
+# Falls kein aktives Ticket, nächstes pending Ticket finden
+if [ -z "$ACTIVE_SPRINT" ]; then
+    ACTIVE_SPRINT=$(grep "pending" workspace/tickets/ticket_log.csv | head -1 | cut -d',' -f6 | sed 's/S/REED-S/')
+fi
 
 # 2. Sprint-Status checken
 cat workspace/tickets/$ACTIVE_SPRINT/$ACTIVE_SPRINT.md | grep "Fortschritt"

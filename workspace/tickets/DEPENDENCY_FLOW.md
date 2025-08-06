@@ -117,22 +117,32 @@ graph TD
 # 1. Aktive Tickets finden
 grep "active" ticket_log.csv
 
-# 2. Sprint-ID extrahieren (z.B. S001, S002, S003)
-# Format: [REED-S###-T##]
+# 2. Sprint-ID extrahieren aus Spalte 6 (Sprint)
+ACTIVE_SPRINT=$(grep "active" ticket_log.csv | head -1 | cut -d',' -f6 | sed 's/S/REED-S/')
 
-# 3. Sprint-Ordner = REED-S###
-# 4. Sprint-Dokument = REED-S###/REED-S###.md
-# 5. Meta-Ticket = REED-S###/REED-S###-T00.md
+# 3. Falls kein aktives Ticket, nächstes pending Ticket
+if [ -z "$ACTIVE_SPRINT" ]; then
+    ACTIVE_SPRINT=$(grep "pending" ticket_log.csv | head -1 | cut -d',' -f6 | sed 's/S/REED-S/')
+fi
+
+# 4. Sprint-Ordner = $ACTIVE_SPRINT
+# 5. Sprint-Dokument = $ACTIVE_SPRINT/$ACTIVE_SPRINT.md
+# 6. Meta-Ticket = $ACTIVE_SPRINT/$ACTIVE_SPRINT-T00.md
 ```
 
 ### Sprint-Übergang
 
 Wenn alle Tickets eines Sprints completed sind:
 1. Sprint-Dokument mit Lessons Learned abschließen
-2. Neuen Sprint-Ordner erstellen (z.B. REED-S002)
-3. Neue Tickets für neuen Sprint definieren
-4. ticket_log.csv mit neuen Sprint-Tickets erweitern
-5. Neues Sprint-Dokument und Meta-Ticket erstellen
+2. Sprint-Status in REED-S###.md auf "COMPLETED" setzen
+3. Neuen Sprint-Ordner erstellen (z.B. REED-S002)
+4. SPRINT_TEMPLATE.md in neuen Ordner kopieren und anpassen
+5. Neue Tickets für neuen Sprint definieren (thematischer Fokus!)
+6. ticket_log.csv mit neuen Sprint-Tickets erweitern
+7. Erstes Ticket des neuen Sprints auf "active" setzen
+8. Meta-Ticket T00 ist IMMER das erste aktive Ticket
+
+**WICHTIG:** Es muss IMMER mindestens ein Ticket "active" sein!
 
 ### Multi-Sprint-Support
 
@@ -145,9 +155,31 @@ workspace/tickets/
 └── REED-S###/             # Weitere thematische Sprints
 ```
 
+## Fehlerbehandlung
+
+### Häufige Probleme und Lösungen
+
+1. **Kein aktives Ticket gefunden**
+   - Prüfe ob Sprint abgeschlossen ist
+   - Setze nächstes pending Ticket auf active
+   - Meta-Ticket T00 sollte immer active sein
+
+2. **Sprint-Ordner existiert nicht**
+   - Prüfe ticket_log.csv für korrekte Sprint-ID
+   - Erstelle fehlenden Ordner aus SPRINT_TEMPLATE.md
+
+3. **Mehrere Tickets sind active**
+   - NUR EIN Ticket darf active sein (außer Meta-Ticket)
+   - Setze alle außer einem auf inactive
+
+4. **Case-Sensitivity-Probleme**
+   - Alle .md Steuerdateien sind GROSSGESCHRIEBEN
+   - ticket_log.csv ist kleingeschrieben
+
 ## Verbesserungsvorschläge
 
 1. **README.md in tickets/**: ✅ Bereits erstellt
 2. **DEPENDENCY_FLOW.md**: ✅ Dieses Dokument (jetzt Sprint-generisch)
 3. **Sprint-Detection-Script**: Könnte automatisch aktuellen Sprint finden
-4. **Sprint-Template**: Vorlage für neue Sprint-Ordner
+4. **Sprint-Template**: ✅ SPRINT_TEMPLATE.md erstellt
+5. **Fehlerbehandlung**: ✅ Dokumentiert
