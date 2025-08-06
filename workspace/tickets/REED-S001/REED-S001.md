@@ -69,7 +69,7 @@
 | T02 | Analyse und Kategorisierung | completed | 100% ✅ |
 | T03 | Core Architecture - UCG System | completed | 100% ✅ |
 | T04 | Core Architecture - EPC System | completed | 100% ✅ |
-| T05 | Core Architecture - 4-Layer Architecture | inactive | 0% |
+| T05 | Core Architecture - 4-Layer Architecture | completed | 100% ✅ |
 | T06 | WCAG 2.2 Compliance System | inactive | 0% |
 | T07 | Snippet System Grundlagen | inactive | 0% |
 | T08 | Registry System | inactive | 0% |
@@ -85,10 +85,10 @@
 
 ### Sprint-Metriken
 - **Tickets gesamt:** 17 (+1 Meta)
-- **Tickets abgeschlossen:** 4
+- **Tickets abgeschlossen:** 5
 - **Tickets in Arbeit:** 0
-- **Tickets ausstehend:** 13
-- **Sprint-Fortschritt:** 24%
+- **Tickets ausstehend:** 12
+- **Sprint-Fortschritt:** 29%
 
 ## Qualitätssicherung
 
