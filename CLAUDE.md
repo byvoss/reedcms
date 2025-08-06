@@ -80,9 +80,9 @@ grep -r "UCG" workspace/import/
 ### Beim Session-Start SOFORT einlesen (in dieser Reihenfolge):
 1. **workspace/tickets/validation_checklist.md** - Goldene Regeln der Arbeit
 2. **workspace/tickets/sprint_checklist.md** - Sprint-Prozess verstehen
-3. **workspace/tickets/ticket_log.csv** - Aktueller Status aller Tickets
-4. **workspace/tickets/REED-S001/REED-S001.md** - Aktueller Sprint-Status
-5. **workspace/tickets/REED-S001/REED-S001-T00.md** - Meta-Prozess für Tickets
+3. **workspace/tickets/ticket_log.csv** - Identifiziere aktiven Sprint via "active" Status
+4. **workspace/tickets/REED-S###/REED-S###.md** - Sprint-Status des aktiven Sprints
+5. **workspace/tickets/REED-S###/REED-S###-T00.md** - Meta-Prozess des aktiven Sprints
 
 ### Selbstprüfender Ticket-Zyklus
 
@@ -90,13 +90,16 @@ Wir arbeiten in einem selbstprüfenden, selbstdokumentierenden Ticket-System:
 
 ```
 workspace/tickets/
-├── ticket_log.csv              # Globale Ticket-Übersicht (IMMER aktuell halten!)
+├── ticket_log.csv              # ZENTRALE Wahrheit: Alle Sprints & Tickets
 ├── validation_checklist.md     # GOLDENE REGEL: Original-Informationsgehalt bewahren
 ├── sprint_checklist.md         # Sprint-Management-Prozess
-└── REED-S001/                  # Aktueller Sprint
-    ├── REED-S001.md           # Sprint-Übersicht (20% complete - 2/10 Tickets)
-    ├── REED-S001-T00.md       # Meta-Ticket: IMMER befolgen!
-    └── REED-S001-T01 bis T10  # Sprint-Tickets
+├── DEPENDENCY_FLOW.md          # System-Erklärung und Sprint-Erkennung
+├── REED-S001/                  # Sprint 1: Dokumentations-Neustrukturierung
+├── REED-S002/                  # Sprint 2: [Nächstes Thema]
+└── REED-S###/                  # Weitere thematische Sprints
+    ├── REED-S###.md           # Sprint-Übersicht mit Fortschritt
+    ├── REED-S###-T00.md       # Meta-Ticket: IMMER befolgen!
+    └── REED-S###-T##.md       # Sprint-spezifische Tickets
 ```
 
 ### Kritische Arbeitsregeln
@@ -115,14 +118,14 @@ workspace/tickets/
 
 ### Workflow für neue Session
 ```bash
-# 1. Status prüfen
-cat workspace/tickets/ticket_log.csv | grep "active"
+# 1. Aktiven Sprint identifizieren
+ACTIVE_SPRINT=$(grep "active" workspace/tickets/ticket_log.csv | head -1 | cut -d',' -f1 | cut -d'-' -f1-2)
 
 # 2. Sprint-Status checken
-cat workspace/tickets/REED-S001/REED-S001.md | grep "Fortschritt"
+cat workspace/tickets/$ACTIVE_SPRINT/$ACTIVE_SPRINT.md | grep "Fortschritt"
 
 # 3. Aktives Ticket identifizieren oder nächstes starten
-# 4. Meta-Ticket T00 Prozess befolgen
+# 4. Meta-Ticket T00 des aktiven Sprints befolgen
 ```
 
 ## Projekt-Übersicht

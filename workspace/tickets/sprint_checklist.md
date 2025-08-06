@@ -53,11 +53,31 @@ Siehe DEPENDENCY_FLOW.md für optimale Einlesereihenfolge der Dokumente!
 - [ ] Lessons Learned dokumentiert
 - [ ] Metriken finalisiert
 
-### Übergabe
+### Übergabe zum nächsten Sprint
 - [ ] Alle Dokumente committed und gepusht
 - [ ] Sprint-Dokument als "COMPLETED" markiert
-- [ ] Nächster Sprint vorbereitet
+- [ ] Neuen Sprint-Ordner erstellen (REED-S###)
+- [ ] SPRINT_TEMPLATE.md für neuen Sprint verwenden
+- [ ] Neue Tickets in ticket_log.csv eintragen
+- [ ] Thematischen Fokus für neuen Sprint definieren
 - [ ] Retrospektive durchgeführt
+
+## Sprint-Übergangs-Workflow
+
+### Automatische Sprint-Erkennung
+```bash
+# Aktuelle Sprint-Nummer finden
+CURRENT_SPRINT=$(ls workspace/tickets/ | grep "REED-S" | sort -V | tail -1)
+SPRINT_NUM=$(echo $CURRENT_SPRINT | sed 's/REED-S0*//')
+NEXT_NUM=$((SPRINT_NUM + 1))
+NEXT_SPRINT=$(printf "REED-S%03d" $NEXT_NUM)
+```
+
+### Neuen Sprint erstellen
+1. `mkdir workspace/tickets/$NEXT_SPRINT`
+2. Template kopieren und anpassen
+3. Tickets für neues Thema definieren
+4. ticket_log.csv erweitern
 
 ## Kontinuierliche Verbesserung
 
