@@ -2,7 +2,7 @@ ticket_id,title,status,created,updated,sprint,assignee,acceptance_criteria_met
 [REED-S001-T00],Meta-Ticket: Arbeitsweise und Qualitätssicherung,active,2024-01-09 10:00:00,2025-08-06 19:30:00,S001,Claude,ongoing
 [REED-S001-T01],Repository Setup und Ticket System,completed,2024-01-09 10:00:00,2024-01-09 10:15:00,S001,Claude,done
 [REED-S001-T02],Analyse und Kategorisierung der Import-Dokumente,completed,2024-01-09 10:00:00,2025-08-06 14:45:00,S001,Claude,done
-[REED-S001-T03],Core Architecture - UCG System,active,2024-01-09 10:00:00,2025-08-06 20:45:00,S001,Claude,pending
+[REED-S001-T03],Core Architecture - UCG System,completed,2024-01-09 10:00:00,2025-08-06 21:15:00,S001,Claude,done
 [REED-S001-T04],Core Architecture - EPC System,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
 [REED-S001-T05],Core Architecture - 4-Layer Architecture,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
 [REED-S001-T06],WCAG 2.2 Compliance System,inactive,2024-01-09 10:00:00,2024-01-09 10:00:00,S001,Claude,pending
