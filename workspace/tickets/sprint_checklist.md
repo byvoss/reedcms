@@ -1,5 +1,8 @@
 # Sprint-Level Checkliste
 
+## Wichtig: Einlesereihenfolge
+Siehe DEPENDENCY_FLOW.md für optimale Einlesereihenfolge der Dokumente!
+
 ## Sprint-Start Checkliste
 
 ### 1. Sprint-Planung
@@ -10,7 +13,9 @@
 - [ ] Zeitschätzung realistisch
 
 ### 2. Sprint-Dokumentation
-- [ ] Sprint-Dokument REED-S###.md erstellt
+- [ ] Sprint-Ordner workspace/tickets/REED-S### erstellt
+- [ ] Sprint-Dokument REED-S###.md im Sprint-Ordner erstellt
+- [ ] Alle Sprint-Tickets im Sprint-Ordner abgelegt
 - [ ] Alle Tickets in ticket_log.csv eingetragen
 - [ ] Meta-Ticket T00 für Sprint aktiviert
 - [ ] Validation Checklist aktuell

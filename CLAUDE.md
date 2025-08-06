@@ -75,6 +75,57 @@ cat workspace/import/reedcms_01_overview.md
 grep -r "UCG" workspace/import/
 ```
 
-## Nächste Schritte
+## WICHTIG: Ticket-System und Arbeitsweise
 
-Das Projekt muss in kleine, logische Themenbereiche (max. 500 Zeilen) aufgeteilt werden für die Implementierung.
+### Beim Session-Start SOFORT einlesen (in dieser Reihenfolge):
+1. **workspace/tickets/validation_checklist.md** - Goldene Regeln der Arbeit
+2. **workspace/tickets/sprint_checklist.md** - Sprint-Prozess verstehen
+3. **workspace/tickets/ticket_log.csv** - Aktueller Status aller Tickets
+4. **workspace/tickets/REED-S001/REED-S001.md** - Aktueller Sprint-Status
+5. **workspace/tickets/REED-S001/REED-S001-T00.md** - Meta-Prozess für Tickets
+
+### Selbstprüfender Ticket-Zyklus
+
+Wir arbeiten in einem selbstprüfenden, selbstdokumentierenden Ticket-System:
+
+```
+workspace/tickets/
+├── ticket_log.csv              # Globale Ticket-Übersicht (IMMER aktuell halten!)
+├── validation_checklist.md     # GOLDENE REGEL: Original-Informationsgehalt bewahren
+├── sprint_checklist.md         # Sprint-Management-Prozess
+└── REED-S001/                  # Aktueller Sprint
+    ├── REED-S001.md           # Sprint-Übersicht (20% complete - 2/10 Tickets)
+    ├── REED-S001-T00.md       # Meta-Ticket: IMMER befolgen!
+    └── REED-S001-T01 bis T10  # Sprint-Tickets
+```
+
+### Kritische Arbeitsregeln
+
+1. **NUR EIN TICKET** gleichzeitig aktiv (status: in_progress)
+2. **Original-Informationsgehalt** bewahren - bei Unklarheit IMMER nachfragen
+3. **Keine eigenen Interpretationen** ohne explizite Nachfrage
+4. **Sprint-Dokument** bei jedem Ticket-Abschluss aktualisieren
+5. **Git commits** mit Format: [TICKET-ID] - Beschreibung
+
+### Aktueller Status (Stand: 2025-08-06)
+- **Sprint:** REED-S001 - Dokumentations-Neustrukturierung
+- **Fortschritt:** 20% (2 von 10 Tickets abgeschlossen)
+- **Abgeschlossen:** T01 (Repository Setup), T02 (Analyse)
+- **Nächstes Ticket:** T03 (Core Concepts)
+
+### Workflow für neue Session
+```bash
+# 1. Status prüfen
+cat workspace/tickets/ticket_log.csv | grep "active"
+
+# 2. Sprint-Status checken
+cat workspace/tickets/REED-S001/REED-S001.md | grep "Fortschritt"
+
+# 3. Aktives Ticket identifizieren oder nächstes starten
+# 4. Meta-Ticket T00 Prozess befolgen
+```
+
+## Projekt-Übersicht
+
+Das Projekt transformiert 22 Import-Dokumente in strukturierte Implementierungs-Dokumentation.
+Alle Original-Dokumente befinden sich in workspace/import/.

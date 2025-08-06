@@ -37,7 +37,7 @@ Dieses Meta-Ticket definiert die verbindliche Arbeitsweise für alle anderen Tic
 - [ ] Git push
 - [ ] Status in ticket_log.csv auf 'completed' setzen
 - [ ] acceptance_criteria_met auf 'done' setzen
-- [ ] Sprint-Dokument REED-S001.md aktualisieren (Status + Metriken)
+- [ ] Sprint-Dokument REED-S001/REED-S001.md aktualisieren (Status + Metriken)
 
 ## Warnsignale für Abweichung
 - Verwendung von "könnte", "sollte", "würde" ohne Original-Referenz
