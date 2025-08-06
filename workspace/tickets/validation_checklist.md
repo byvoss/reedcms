@@ -47,4 +47,7 @@
 
 ## GOLDENE REGEL
 
-**Im Zweifel: Original-Formulierung beibehalten!**
+**Im Zweifel: Original-Informationsgehalt bewahren!**
+- Konzept dahinter verstehen
+- Bei Unklarheiten IMMER nachfragen
+- Keine eigenen Interpretationen hinzufügen

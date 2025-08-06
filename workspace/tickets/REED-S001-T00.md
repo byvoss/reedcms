@@ -17,7 +17,8 @@ Dieses Meta-Ticket definiert die verbindliche Arbeitsweise für alle anderen Tic
 ### 2. Während der Bearbeitung
 - [ ] Bei JEDEM Absatz prüfen: Stammt dieser aus workspace/import?
 - [ ] Bei JEDER Aussage prüfen: Ist das meine Interpretation oder Original?
-- [ ] Bei Unsicherheit: Original-Formulierung verwenden
+- [ ] Bei Unsicherheit: Original-Informationsgehalt verstehen und nachfragen
+- [ ] KEINE eigenen Interpretationen ohne explizite Nachfrage
 - [ ] Fortschritt in workspace/analysis/progress_[ticket-id].md dokumentieren
 
 ### 3. Qualitätsprüfung
