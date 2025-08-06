@@ -209,7 +209,7 @@ $ reed recover csv-from-postgres
 
 ### Full System Recovery
 ```bash
-$ reed recover full-system --from-backup backup.tar.gz
+$ reed recover full-system --from-backup backup.tar.xz
 ✓ Extracted backup archive
 ✓ Restored PostgreSQL main + UCG schemas  
 ✓ Generated CSV files from UCG backup
