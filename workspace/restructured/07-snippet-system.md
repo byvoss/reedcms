@@ -416,19 +416,19 @@ Die Breakpoints werden durch Klassen gesteuert, nicht durch Media Queries - das 
 ReedCMS nutzt vier CSS Layers (siehe T09 für vollständige Dokumentation):
 
 ```css
-@layer kernel, bridge, snippet, template;
+@layer kernel, bridge, snippet, theme;
 ```
 
 1. **kernel** - System-Defaults (von Rust generiert)
 2. **bridge** - Externe Libraries (Bootstrap, Tailwind, etc.)
 3. **snippet** - Component-Defaults (aus .css Dateien)  
-4. **template** - Developer-Overrides (Custom Styles)
+4. **theme** - Developer-Overrides (Custom Styles)
 
 Diese klare Hierarchie eliminiert !important komplett:
 - Kernel wird von Rust bereitgestellt
 - Bridge kapselt externe Dependencies
 - Snippet-Entwickler nutzen `@layer snippet { }`
-- Template-Entwickler überschreiben alles
+- Theme-Entwickler überschreiben alles
 
 KISS: Vier Layer, klare Hierarchie, keine Überraschungen.
 

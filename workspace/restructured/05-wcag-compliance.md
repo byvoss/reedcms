@@ -180,13 +180,13 @@ function acceptReaderDetection() {
 
 ```css
 /* ReedCMS Layer-Hierarchie (siehe T09 für Details) */
-@layer kernel, bridge, snippet, template;
+@layer kernel, bridge, snippet, theme;
 
 /* Kernel Layer - Von Rust generiert */
 /* Enthält System-Defaults wie Focus-Styles */
 
-/* Template Layer - WCAG Overrides */
-@layer template {
+/* Theme Layer - WCAG Overrides */
+@layer theme {
     /* WCAG-Anpassungen überschreiben alles */
     .wcag hero-banner h1 { 
         font-size: 2rem;

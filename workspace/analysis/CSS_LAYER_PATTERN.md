@@ -3,13 +3,13 @@
 ## Die ReedCMS Layer-Hierarchie
 
 ```css
-@layer kernel, bridge, snippet, template;
+@layer kernel, bridge, snippet, theme;
 ```
 
 1. **kernel** - Von Rust vorgegeben, ReedCMS Core Styles
 2. **bridge** - Externe Libraries (gekapselt in Sub-Layers)
 3. **snippet** - Component Defaults aus .css Dateien
-4. **template** - Developer Overrides
+4. **theme** - Developer Overrides
 
 ## Wo bereits angepasst werden muss:
 
@@ -26,7 +26,7 @@
 
 ```css
 /* ReedCMS Layer-Hierarchie (siehe T09 für Details) */
-@layer kernel, bridge, snippet, template;
+@layer kernel, bridge, snippet, theme;
 
 /* Kernel wird von Rust bereitgestellt */
 /* Bridge für externe Libraries */
@@ -40,8 +40,8 @@
     /* Component styles */
 }
 
-/* Template Layer - Developer Overrides */
-@layer template {
+/* Theme Layer - Developer Overrides */
+@layer theme {
     /* Custom styles */
 }
 ```
