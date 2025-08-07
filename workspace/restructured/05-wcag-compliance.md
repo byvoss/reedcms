@@ -15,9 +15,15 @@ ReedCMS ist das erste CMS, das WCAG 2.2 Konformität als Standard-Feature implem
     // IMMER prüfen ob Screen Reader aktiv ist
     const detected = window.speechSynthesis?.getVoices().length > 0;
     
+    // Global verfügbar machen
+    window.reedReader = { active: detected };
+    
     // Status in Cookie speichern/aktualisieren
     const readerStatus = detected ? 'active' : 'inactive';
     document.cookie = `reed_reader=${readerStatus}; path=/; max-age=31536000; SameSite=Lax`;
+    
+    // Breakpoint-Update triggern
+    document.dispatchEvent(new Event('reedReaderChanged'));
     
     // Bei Änderung des Status → Backend informieren
     const lastStatus = getCookie('reed_reader_last');
@@ -60,10 +66,7 @@ function detectReaderFeatures() {
 
 // Test ob ARIA live regions unterstützt werden
 function testAriaLiveSupport() {
-    const testElement = document.createElement('div');
-    testElement.setAttribute('role', 'status');
-    testElement.setAttribute('aria-live', 'polite');
-    return testElement.getAttribute('aria-live') === 'polite';
+    return 'ariaLive' in document.createElement('div');
 }
 
 // Bekannte Screen Reader erkennen
@@ -176,8 +179,8 @@ function acceptReaderDetection() {
 ### CSS @scope für WCAG
 
 ```css
-/* Native CSS @scope für WCAG - Teil des Theme Systems */
-@scope (.reed-wcag) {
+/* Native CSS @scope für WCAG - Teil des Breakpoint Systems */
+@scope (.wcag) {
     /* Dekorative Elemente ausblenden */
     .decorative-only,
     .visual-metadata,
@@ -208,9 +211,14 @@ function acceptReaderDetection() {
     }
 }
 
-/* JavaScript fügt Scope-Klasse hinzu */
-if (readerDetected) {
-    document.body.classList.add('reed-wcag');
+/* JavaScript setzt Breakpoint-Klasse */
+// Breakpoint-Klassen werden durch reedCMS gesetzt
+// WCAG hat immer Priorität vor viewport-basierten Breakpoints
+if (window.reedReader?.active) {
+    document.body.className = 'wcag';
+} else {
+    // Standard Breakpoints: phone, tablet, screen, wide
+    document.body.className = reedCMS.getBreakpoint();
 }
 ```
 
@@ -464,16 +472,8 @@ impl AdminPanel {
 ## Performance-Optimierungen
 
 ```javascript
-// Intelligentes Lazy Loading mit Reader-Support
-if (isScreenReaderActive) {
-    // Lade sofort für Screen Reader
-    img.src = img.dataset.src;
-} else {
-    // Standard Intersection Observer für visuelle Nutzer
-    observeImage(img);
-}
+img.loading = isScreenReaderActive ? 'eager' : 'lazy';
 ```
-
 ## Marketing-Differenzierung
 
 ReedCMS ist das erste CMS mit:
@@ -487,7 +487,7 @@ ReedCMS ist das erste CMS mit:
 
 ### Der menschliche Unterschied
 
-"Wer eine Behinderung hat und das braucht, wird das sehr zu schätzen wissen" - Diese Philosophie durchzieht ReedCMS. Wir reduzieren die Informationsflut für Screen Reader Nutzer drastisch durch:
+"Wer eine Behinderung hat und das braucht, wird das sehr zu schätzen wissen" - Wir reduzieren die Informationsflut drastisch durch:
 - Separate, fokussierte Templates
 - Konditionale Inhalts-Einbindung
 - Wegfall dekorativer Elemente
