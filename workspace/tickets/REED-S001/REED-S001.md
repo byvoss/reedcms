@@ -72,7 +72,7 @@
 | T05 | Core Architecture - 4-Layer Architecture | completed | 100% ✅ |
 | T06 | WCAG 2.2 Compliance System | completed | 100% ✅ |
 | T07 | Snippet System Grundlagen | completed | 100% ✅ |
-| T08 | Registry System | inactive | 0% |
+| T08 | Registry System | completed | 100% ✅ |
 | T09 | Template System | inactive | 0% |
 | T10 | Translation System | inactive | 0% |
 | T11 | Theme Architecture | inactive | 0% |
@@ -85,10 +85,10 @@
 
 ### Sprint-Metriken
 - **Tickets gesamt:** 17 (+1 Meta)
-- **Tickets abgeschlossen:** 7
+- **Tickets abgeschlossen:** 8
 - **Tickets in Arbeit:** 0
-- **Tickets ausstehend:** 10
-- **Sprint-Fortschritt:** 41%
+- **Tickets ausstehend:** 9
+- **Sprint-Fortschritt:** 47%
 
 ## Qualitätssicherung
 
