@@ -164,52 +164,55 @@ export function enhance(element) {
 </product-showcase>
 ```
 
-### Die .css Datei - Styling mit @scope
+### Die .css Datei - Styling mit CSS Layers
 
 ```css
-/* hero-banner.css - Nutzt native CSS @scope */
-@scope (hero-banner) {
-    :scope {
+/* hero-banner.css - Explizit im snippet layer */
+@layer snippet {
+    hero-banner {
         display: block;
         padding: 4rem 2rem;
         text-align: center;
     }
     
-    h1 {
+    hero-banner h1 {
         font-size: 3rem;
         margin: 0;
     }
     
-    .subtitle {
+    hero-banner .subtitle {
         font-size: 1.5rem;
         opacity: 0.8;
         margin-top: 1rem;
     }
+    
+    /* Verschachtelte Components */
+    hero-banner text-block {
+        margin-top: 2rem;
+    }
 }
+```
 
-/* Breakpoint-spezifische Styles */
-@scope (.wcag) {
-    hero-banner {
+### Template-spezifische Overrides
+
+```css
+/* Im template layer kann der Entwickler überschreiben */
+@layer template {
+    /* WCAG Anpassungen */
+    .wcag hero-banner {
         padding: 2rem 1rem;
     }
     
-    hero-banner h1 {
+    .wcag hero-banner h1 { 
         font-size: 2rem;
         line-height: 1.5;
     }
     
-    hero-banner .subtitle {
-        font-size: 1.2rem;
-    }
-}
-
-@scope (.phone) {
-    hero-banner {
-        padding: 1rem;
-    }
-    
-    hero-banner h1 {
-        font-size: 1.75rem;
+    /* Responsive ohne eigenen Layer */
+    @media (max-width: 559px) {
+        hero-banner {
+            padding: 1rem;
+        }
     }
 }
 ```
@@ -407,6 +410,27 @@ snippets/hero-banner/
 ```
 
 Die Breakpoints werden durch Klassen gesteuert, nicht durch Media Queries - das ermöglicht Server-Side Rendering optimiert für den jeweiligen Context.
+
+## CSS Layer Architektur
+
+ReedCMS nutzt vier CSS Layers (siehe T09 für vollständige Dokumentation):
+
+```css
+@layer kernel, bridge, snippet, template;
+```
+
+1. **kernel** - System-Defaults (von Rust generiert)
+2. **bridge** - Externe Libraries (Bootstrap, Tailwind, etc.)
+3. **snippet** - Component-Defaults (aus .css Dateien)  
+4. **template** - Developer-Overrides (Custom Styles)
+
+Diese klare Hierarchie eliminiert !important komplett:
+- Kernel wird von Rust bereitgestellt
+- Bridge kapselt externe Dependencies
+- Snippet-Entwickler nutzen `@layer snippet { }`
+- Template-Entwickler überschreiben alles
+
+KISS: Vier Layer, klare Hierarchie, keine Überraschungen.
 
 ## Performance-Optimierung
 

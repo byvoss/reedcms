@@ -176,49 +176,47 @@ function acceptReaderDetection() {
 </article>
 ```
 
-### CSS @scope für WCAG
+### CSS Layers für WCAG Integration
 
 ```css
-/* Native CSS @scope für WCAG - Teil des Breakpoint Systems */
-@scope (.wcag) {
-    /* Dekorative Elemente ausblenden */
-    .decorative-only,
-    .visual-metadata,
-    .hero-animation {
+/* ReedCMS Layer-Hierarchie (siehe T09 für Details) */
+@layer kernel, bridge, snippet, template;
+
+/* Kernel Layer - Von Rust generiert */
+/* Enthält System-Defaults wie Focus-Styles */
+
+/* Template Layer - WCAG Overrides */
+@layer template {
+    /* WCAG-Anpassungen überschreiben alles */
+    .wcag hero-banner h1 { 
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+    
+    .wcag .decorative-only,
+    .wcag .visual-metadata {
         display: none;
     }
     
-    /* Größere Abstände für bessere Navigation */
-    .content > * + * {
-        margin-top: 2rem;
+    .wcag .gallery { 
+        display: block; 
     }
     
-    /* Fokus-Indikatoren verstärken */
-    :focus {
+    .wcag :focus {
         outline: 4px solid var(--reed-focus-color);
         outline-offset: 4px;
     }
     
-    /* Lineare Layouts statt Grid */
-    .gallery-grid {
-        display: block;
-    }
-    
-    /* Größere Touch-Targets */
-    button, a, [role="button"] {
+    .wcag button,
+    .wcag a {
         min-height: 44px;
         min-width: 44px;
     }
 }
 
-/* JavaScript setzt Breakpoint-Klasse */
-// Breakpoint-Klassen werden durch reedCMS gesetzt
-// WCAG hat immer Priorität vor viewport-basierten Breakpoints
+/* JavaScript setzt Kontext-Klasse */
 if (window.reedReader?.active) {
-    document.body.className = 'wcag';
-} else {
-    // Standard Breakpoints: phone, tablet, screen, wide
-    document.body.className = reedCMS.getBreakpoint();
+    document.body.classList.add('wcag');
 }
 ```
 

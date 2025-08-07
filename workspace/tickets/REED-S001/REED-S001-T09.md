@@ -14,11 +14,11 @@ Dokumentation des Template Systems mit Tera und Web Components.
 **Fokus:** NUR Template-Engine und Web Component Integration.
 
 ## Akzeptanzkriterien
-1. [ ] Tera Template Syntax
-2. [ ] Web Component Lifecycle
-3. [ ] Server/Client Integration
-4. [ ] Template Functions
-5. [ ] Keine Theme/Scope Details
+1. [ ] CSS Layer Architektur (kernel, bridge, snippet, template)
+2. [ ] Tera Template Syntax
+3. [ ] Web Component Lifecycle
+4. [ ] Server/Client Integration
+5. [ ] Template Functions
 6. [ ] Max. 500 Zeilen
 
 ## Input-Dokumente
@@ -29,6 +29,8 @@ Dokumentation des Template Systems mit Tera und Web Components.
 - `workspace/restructured/09-template-system.md`
 
 ## Notizen
+- CSS Layer Architektur als zentrales Thema
+- Bridge Layer für externe Libraries
 - Tera + Web Components Combo
 - Progressive Enhancement
-- Mobile-First Approach
+- WICHTIG: Ab hier ALLE CSS-Beispiele mit Layer-Pattern
